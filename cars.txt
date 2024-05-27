@@ -1,0 +1,39 @@
+CARS
+__________
+
+id                 -    UNSIGNED INT - PRIMARY KEY (NOT NULL, UNIQUE) - AUTO_INCREMENT
+brand              -    VARCHAR(255) - NOT NULL                      
+model              -    VARCHAR(255) - NOT NULL       
+year               -    YEAR         - NOT NULL                      
+color              -    VARCHAR(255) - NOT NULL                                   
+mileage            -    UNSIGNED INT - NOT NULL                               
+fuel_type          -    VARCHAR(255) - NOT NULL                                    
+doors              -    UNSIGNED TINYINT                               
+seats              -    UNSIGNED TINYINT                               
+price              -    DECIMAL(9, 2) // 9999999.99 - NOT NULL
+discount_price     -    DECIMAL(9, 2) // 9999999.99                  
+description        -    MEDIUMTEXT                                    
+stock_available    -    TINYINT - NOT NULL                            
+image_path         -    TEXT - DEFAULT("img/car-placeholder.jpg")    
+car_displacement   -    VARCHAR(255)                                   
+car_horsepower     -    SMALLINT                              
+weight_kg          -    SMALLINT                                       
+
+
+
+
+appunti:
+- UNSIGNED INT: Un numero intero senza segno, non può essere negativo. 
+- PRIMARY KEY: Indica che questa colonna è la chiave primaria della tabella, un id unico per ogni riga.
+- YEAR: Un campo specifico per memorizzare l'anno.
+- AUTO_INCREMENT: I valori vengono incrementati automaticamente con l'inserimento di nuovi record.
+- VARCHAR(255): Una stringa di testo variabile lunga fino a 255 caratteri.
+- NOT NULL: Non può avere valori nulli.
+- UNIQUE: I valori in questa colonna devono essere unici.
+- UNSIGNED TINYINT: Un numero intero molto piccolo senza segno (non può essere negativo).
+- DECIMAL(n, d): Un numero decimale con un massimo di "n" cifre, di cui "d" decimali.
+- MEDIUMTEXT: Un tipo di dato per memorizzare testi molto lunghi.
+- TEXT: Un tipo di dato per memorizzare testi di lunghezza variabile.
+- DEFAULT: Specifica un valore predefinito per la colonna se non viene fornito un altro valore.
+- TINYINT: Un numero intero molto piccolo. Utilizzato per colonne come stock_available.
+- SMALLINT: Un numero intero piccolo. Utilizzato per colonne come car_horsepower e weight_kg.
